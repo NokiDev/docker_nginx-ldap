@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  nginx_build:
+    build: 
+      context: ./build
+    image: ghcr.io/NokiDev/nginx-ldap:release-1.16.1
+    
