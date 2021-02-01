@@ -43,11 +43,12 @@ RUN echo "==> Configuring system" \
 	&& rm -rf /tmp/dockerize.tar.gz
 
 COPY nginx.default.conf /etc/nginx/nginx.conf
-COPY nginx.vh.default.conf /etc/nginx/conf.d/default.config
+COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /usr/local/nginx
 
 EXPOSE 80 443
 
 COPY run.sh /run.sh
+RUN chmod 700 /run.sh
 CMD ["/run.sh"]
