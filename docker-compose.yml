@@ -4,5 +4,5 @@ services:
   nginx_build:
     build: 
       context: ./build
-    image: ghcr.io/NokiDev/nginx-ldap:release-1.16.1
+    image: ghcr.io/nokidev/nginx-ldap:release-1.16.1
     
